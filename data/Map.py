@@ -42,9 +42,15 @@ class Map(object):
             f'Speed: {round(self.speed)}', 
             False, 
             self.white)
+        player_aim = FONT.render(
+            f'AimX: {player.aim_x} AimY: {player.aim_y}',
+            False,
+            self.white
+        )
 
         self.SCREEN.blit(player_coordinates, (0, 0))
-        self.SCREEN.blit(player_speed, (0, 30))
+        self.SCREEN.blit(player_speed, (0, 15))
+        self.SCREEN.blit(player_aim, (0, 30))
 
         pygame.draw.rect(
             self.SCREEN, 
